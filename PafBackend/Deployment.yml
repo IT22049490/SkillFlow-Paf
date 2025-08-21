@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: springboot-app
-          image: fasnas/pafbackend:v1
+          image: fasnas/ultimate-cicd:replaceImageTag
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081
