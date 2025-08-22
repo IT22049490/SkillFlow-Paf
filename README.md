@@ -21,3 +21,4 @@ The pipeline is automated through Jenkins and follows these stages:
 6. ArgoCD Sync – ArgoCD automatically syncs and deploys the new version.
 
 ## 🔄 CI/CD Workflow Diagram
+<img src="./Screenshot (498).png" alt="CI/CD Pipeline" width="600">
