@@ -1,4 +1,4 @@
-# 🚀 SkillFlow – Learning Platform
+## 🚀 SkillFlow – Learning Platform
 SkillFlow is a modern learning platform built using React (frontend) and Spring Boot (backend).
 This repository also demonstrates a complete CI/CD pipeline integrated with Jenkins, SonarQube, DockerHub, and ArgoCD for Kubernetes deployment.
 # 📌 Features
@@ -19,3 +19,5 @@ The pipeline is automated through Jenkins and follows these stages:
 4. Docker Build & Push – Builds a backend Docker image and pushes it to DockerHub.
 5. Update Deployment File – Updates Kubernetes Deployment.yml with the new image tag.
 6. ArgoCD Sync – ArgoCD automatically syncs and deploys the new version.
+
+## 🔄 CI/CD Workflow Diagram
