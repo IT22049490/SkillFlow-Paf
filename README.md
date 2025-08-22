@@ -4,12 +4,12 @@ This repository also demonstrates a complete CI/CD pipeline integrated with Jenk
 # 📌 Features
 -📚 Learning platform with React (frontend) + Spring Boot (backend)
 
--🔐 SonarQube integration for static code analysis
+- 🔐 SonarQube integration for static code analysis
 
--🛠️ Automated build & test with Maven
+- 🛠️ Automated build & test with Maven
 
--📦 Dockerized backend application
+- 📦 Dockerized backend application
 
--🚀 Continuous Deployment with ArgoCD
+- 🚀 Continuous Deployment with ArgoCD
 
--🔔 Notifications & reports on failures
+- 🔔 Notifications & reports on failures
