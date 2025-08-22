@@ -27,7 +27,28 @@ The pipeline is automated through Jenkins and follows these stages:
 
 The backend service is built into a Docker image and pushed to DockerHub:
 
-👉
 ```bash
 fasnas/ultimate-cicd
+```
+### ☸️ Deployment with ArgoCD
+
+- The updated Deployment.yml is committed back to GitHub.
+- ArgoCD monitors the repo and automatically applies changes to the Kubernetes cluster.
+
+### 📬 Notifications
+
+- ❌ Build/Test failure → Report generated & sent via Slack/Email.
+- ✅ Success → Image pushed & deployed automatically.
+
+### 📖 How to Run Locally
+#### Backend (Spring Boot)
+```bash
+cd PafBackend
+mvn spring-boot:run
+```
+#### Frontend (React)
+```bash
+cd PafFrontend
+npm install
+npm start
 ```
