@@ -27,6 +27,7 @@ The pipeline is automated through Jenkins and follows these stages:
 
 The backend service is built into a Docker image and pushed to DockerHub:
 
-👉```bash
+👉
+```bash
 fasnas/ultimate-cicd
 ```
