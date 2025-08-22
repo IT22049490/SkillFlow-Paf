@@ -52,7 +52,7 @@ pipeline {
             git config user.email "mohamedfasnas999@gmail.com"
             git config user.name "Mohamed Fasnas"
             sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" PafBackend/Deployment.yml
-            git add PafBackend/deployment.yml
+            git add PafBackend/Deployment.yml
             git commit -m "Update deployment image to version ${BUILD_NUMBER}"
             git push https://${GITHUB_TOKEN}@github.com/IT22049490/SkillFlow-Paf HEAD:main
           '''
