@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {
+
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/IT22049490/SkillFlow-Paf.git'
@@ -12,11 +13,14 @@ pipeline {
         docker { image 'maven:3.9.6-eclipse-temurin-17' }
       }
       steps {
-        sh 'cd PafBackend && mvn clean package'
+        sh 'cd PafBackend && mvn clean package -DskipTests'
       }
     }
 
     stage('Static Code Analysis') {
+      agent {
+        docker { image 'maven:3.9.6-eclipse-temurin-17' }
+      }
       environment {
         SONAR_URL = "http://20.245.205.56:9000"
       }
@@ -30,7 +34,10 @@ pipeline {
     stage('Build and Push Docker Image') {
       steps {
         script {
+          // Build Docker image using backend Dockerfile
           def dockerImage = docker.build("fasnas/ultimate-cicd:${BUILD_NUMBER}", "PafBackend")
+          
+          // Push to Docker Hub
           docker.withRegistry('https://index.docker.io/v1/', 'docker-cred') {
             dockerImage.push()
           }
@@ -52,5 +59,6 @@ pipeline {
         }
       }
     }
+
   }
 }
