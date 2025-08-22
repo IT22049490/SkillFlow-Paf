@@ -13,8 +13,8 @@ This repository also demonstrates a complete CI/CD pipeline integrated with Jenk
 
 The pipeline is automated through Jenkins and follows these stages:
 
-1.Checkout – Pulls code from GitHub.
-2.Build & Test – Runs Maven build inside a Docker container.
+1. Checkout – Pulls code from GitHub.
+2. Build & Test – Runs Maven build inside a Docker container.
 3.Static Code Analysis – Sends code quality report to SonarQube.
 4.Docker Build & Push – Builds a backend Docker image and pushes it to DockerHub.
 5.Update Deployment File – Updates Kubernetes Deployment.yml with the new image tag.
